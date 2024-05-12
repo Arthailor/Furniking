@@ -6,8 +6,8 @@ body {
     font-family: 'Rubik', sans-serif;
     font-weight: 400;
     font-style: normal;
-    color: #555555;
     background: #E5E5E5;
+    color: #555555;
 }
 
 /* ======================================= */
@@ -49,9 +49,8 @@ body {
     font-weight: 500;
     font-size: 1.5rem;
     line-height: 1.16;
-    /* 28/24 */
-    color: #555555;
     align-self: flex-end;
+    transition: color 0.3s ease;
 }
 
 .title {
@@ -541,7 +540,6 @@ body {
     width: 100%;
     height: 4.25rem;
     background: #F7F8FA;
-
 }
 
 .main__container {
