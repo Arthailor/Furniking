@@ -11,11 +11,11 @@ const langArr = {
         "ru": "или",
         "en": "or",
     }, 
-    "login": {
+    "Login": {
         "ru": "Войти",
-        "en": "Login",
+        "en": "Log in",
     }, 
-    "signup": {
+    "Signup": {
         "ru": "Регистрация",
         "en": "Sign up",
     },  
@@ -370,6 +370,78 @@ const langArr = {
     "terms": {
         "ru": "Условия",
         "en": "Terms",
+    },
+    "back": {
+        "ru": "Назад",
+        "en": "Back",
+    },
+    "signin": {
+        "ru": "Войти",
+        "en": "Sign in",
+    }, 
+    "login": {
+        "ru": "Логин",
+        "en": "Login",
+    }, 
+    "pass": {
+        "ru": "Пароль",
+        "en": "Password",
+    },
+    "create-new": {
+        "ru": "Создать новый аккаунт",
+        "en": "Create new account",
+    },
+    "signup": {
+        "ru": "Зарегистрироваться",
+        "en": "Sign up",
+    },
+    "phone": {
+        "ru": "Телефон",
+        "en": "Phone",
+    },
+    "email": {
+        "ru": "Почта",
+        "en": "Email",
+    },
+    "birth": {
+        "ru": "Дата рождения",
+        "en": "Birth date",
+    },
+    "name": {
+        "ru": "Имя",
+        "en": "Name",
+    },
+    "surname": {
+        "ru": "Фамилия",
+        "en": "Surname",
+    },
+    "patr": {
+        "ru": "Отчество",
+        "en": "Patronymic",
+    },
+    "gen-log": {
+        "ru": "Придумать логин",
+        "en": "Generate login",
+    },
+    "gen-pass": {
+        "ru": "Придумать пароль",
+        "en": "Generate password",
+    },
+    "con-pass": {
+        "ru": "Подтвердите пароль",
+        "en": "Confirm password",
+    },
+    "i-agree": {
+        "ru": "Я прочитал и соглашаюсь с",
+        "en": "I read and agree with ",
+    },
+    "term-reg": {
+        "ru": "условиями пользования",
+        "en": "terms of use ",
+    },
+    "login-as": {
+        "ru": "Войти в существующий аккаунт",
+        "en": "Login as existing account",
     },
 
     "": {

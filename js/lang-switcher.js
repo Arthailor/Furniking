@@ -1,6 +1,7 @@
 const select = document.querySelector('.header-selct');
 const allLang = ['en', 'ru'];
 const elems = [];
+const data = localStorage.getItem('language');
 
 select.addEventListener('change', changeURLLanguage);
 
@@ -8,6 +9,7 @@ select.addEventListener('change', changeURLLanguage);
 function changeURLLanguage() {
     let lang = select.value;
     location.href = window.location.pathname + '#' + lang;
+    localStorage.setItem('language', lang);
     location.reload();
 }
 
@@ -16,7 +18,11 @@ function changeLanguage() {
     hash = hash.substr(1);
     console.log(hash);
     if (!allLang.includes(hash)) {
-        location.href = window.location.pathname + '#en';
+        if(data == null){
+            location.href = window.location.pathname + '#en';
+            localStorage.setItem('language', 'en');
+        }
+        else{location.href = window.location.pathname + '#' + data;}
         location.reload();
     }
     select.value = hash;
@@ -25,7 +31,9 @@ function changeLanguage() {
             elems.push(item);
         })
         if (key == 'input') {
-            document.querySelector('.lng-input').placeholder = langArr[key][hash];
+            if (document.querySelector('.lng-input')==null)
+                {}
+            else {document.querySelector('.lng-input').placeholder = langArr[key][hash];}
         }
         console.log(elems);
         elems.forEach(elem => {
