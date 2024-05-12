@@ -1,3 +1,4 @@
+//Бургер-меню
 document.addEventListener('click', documentClick);
 
 function documentClick(e) {
@@ -7,6 +8,7 @@ function documentClick(e) {
     }
 }
 
+//Свайпер
 var swiper = new Swiper('.body-main__swiper', {
     slidesPerView: 1,
     autoplay: {
@@ -58,6 +60,8 @@ var swiper = new Swiper('.customer-swiper', {
     },
 
 });
+
+//Пагинация
 window.addEventListener('load', windowLoad);
 function windowLoad() {
     document.addEventListener("click", documentActions)

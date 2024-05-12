@@ -1,5 +1,6 @@
 const select = document.querySelector('.header-selct');
 const allLang = ['en', 'ru'];
+const elems = [];
 
 select.addEventListener('change', changeURLLanguage);
 
@@ -20,11 +21,21 @@ function changeLanguage() {
     }
     select.value = hash;
     for (let key in langArr) {
-        let elem = document.querySelector('.lng-' + key);
-        if (elem) {
-            elem.innerHTML = langArr[key][hash];
+        [...document.querySelectorAll('.lng-' + key)].forEach(item => {
+            elems.push(item);
+        })
+        if (key == 'input') {
+            document.querySelector('.lng-input').placeholder = langArr[key][hash];
         }
-
+        console.log(elems);
+        elems.forEach(elem => {
+            if (elem) {
+                elem.innerHTML = langArr[key][hash];
+            }
+        });
+        [...document.querySelectorAll('.lng-' + key)].forEach(item => {
+            elems.pop();
+        })
     }
 }
 
