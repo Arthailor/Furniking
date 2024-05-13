@@ -443,6 +443,66 @@ const langArr = {
         "ru": "Войти в существующий аккаунт",
         "en": "Login as existing account",
     },
+    "about-us": {
+        "ru": "О НАС",
+        "en": "ABOUT US",
+    },
+    "about-furni": {
+        "ru": "Немного о Furniking",
+        "en": "About Furniking",
+    },
+    "about-furni-text": {
+        "ru": "Добро пожаловать в Furniking, лучшее место для удовлетворения всех ваших потребностей в мебели. Мы — интернет-магазин мебели, который гордится тем, что предлагает широкий ассортимент высококачественных и стильных предметов мебели для улучшения вашего жилого пространства. Если вы ищете диваны, столы, стулья, зеркала, табуреты, скамейки или любые другие предметы мебели, мы предоставим вам все необходимое. Благодаря нашей приверженности отличной поддержке клиентов, мы стремимся сделать ваш опыт покупок максимально комфортным и приятным.",
+        "en": "Welcome to Furniking, your premier destination for all your furniture needs. We are an online furniture shopping site that prides itself on offering a wide range of high-quality and stylish furniture pieces to enhance your living spaces. Whether you're looking for sofas, tables, chairs, mirrors, stools, benches, or any other furniture items, we have you covered. With our commitment to excellent customer support, we strive to make your shopping experience as seamless and enjoyable as possible.",
+    },
+    "our-vis": {
+        "ru": "Наши Взгляды",
+        "en": "Our Vision",
+    },
+    "our-vis-text": {
+        "ru": "В Furniking мы стремимся превратить дома в дома, предоставляя мебель, которая не только отвечает вашим функциональным требованиям, но также отражает ваш личный стиль и улучшает эстетику вашего жилого помещения. Мы понимаем, что мебель — это больше, чем просто предметы, заполняющие комнату; это выражение вашей индивидуальности и играет решающую роль в создании теплой и уютной атмосферы. Мы стремимся создать разнообразную коллекцию предметов мебели на любой вкус и предпочтения, гарантируя, что вы найдете идеальные предметы для создания дома своей мечты.",
+        "en": "At Furniking, our vision is to transform houses into homes by providing furniture that not only meets your functional requirements but also reflects your personal style and enhances the aesthetics of your living spaces. We understand that furniture is more than just items to fill a room; it is an expression of your individuality and plays a crucial role in creating a warm and inviting atmosphere. We aim to curate a diverse collection of furniture pieces that cater to different tastes and preferences, ensuring that you find the perfect pieces to create your dream home.",
+    },
+    "qual-n-craft": {
+        "ru": "Качество и Мастерство",
+        "en": "Quality and Craftsmanship",
+    },
+    "qual-n-craft-text": {
+        "ru": "Мы стремимся предложить мебель высочайшего качества и мастерства. Мы сотрудничаем с известными производителями и ремесленниками, которые разделяют нашу страсть к совершенству. Каждое изделие в нашей коллекции тщательно отбирается с учетом его долговечности, функциональности и внимания к деталям. От лучших обивочных тканей до самых прочных каркасов, мы уделяем первоочередное внимание качеству на каждом этапе. Делая покупки в Furniking, вы можете быть уверены, что инвестируете в мебель, которая выдержит испытание временем.",
+        "en": "We are committed to offering furniture of the highest quality and craftsmanship. We work with reputable manufacturers and artisans who share our passion for excellence. Each piece in our collection is carefully selected for its durability, functionality, and attention to detail. From the finest upholstery fabrics to the sturdiest frames, we prioritize quality at every step. When you shop at Furniking, you can be confident that you are investing in furniture that will stand the test of time.",
+    },
+    "ext-sel": {
+        "ru": "Обширный Выбор",
+        "en": "Extensive Selection",
+    },
+    "ext-sel-text": {
+        "ru": "Мы гордимся нашим обширным выбором предметов мебели, предназначенных для удовлетворения самых разных вкусов и предпочтений. Предпочитаете ли вы современный и минималистичный дизайн, классический и вневременной стиль или что-то среднее, у нас есть что-то на любой вкус. От изящных и современных диванов до элегантных обеденных столов — наша коллекция предлагает широкий выбор вариантов, которые помогут вам создать идеальную атмосферу в вашем доме. Посетите наш веб-сайт и найдите предметы мебели, которые соответствуют вашему личному стилю.",
+        "en": "We take pride in our extensive selection of furniture items, designed to cater to a variety of tastes and preferences. Whether you prefer contemporary and minimalist designs, classic and timeless styles, or something in between, we have something to suit every aesthetic. From sleek and modern sofas to elegant dining tables, our collection offers a diverse range of options to help you create the perfect ambiance in your home. Explore our website and discover the furniture pieces that resonate with your personal style.",
+    },
+    "cust-sup": {
+        "ru": "Исключительная Поддержка",
+        "en": "Exceptional Customer Support",
+    },
+    "cust-sup-text": {
+        "ru": "В Furniking мы уделяем приоритетное внимание вашему удовлетворению и стремимся обеспечить исключительную поддержку клиентов на протяжении всего вашего пути к покупкам. Наша специальная группа поддержки готова помочь вам с любыми вопросами, проблемами или помощью, которая может вам понадобиться. Если вам нужна помощь в выборе подходящих предметов мебели, отслеживании вашего заказа или решении каких-либо проблем, мы здесь, чтобы гарантировать, что ваш опыт работы с Furniking будет безупречным и приятным. Ваше удовлетворение является нашей первоочередной задачей.",
+        "en": "At Furniking, we prioritize your satisfaction and strive to provide exceptional customer support throughout your shopping journey. Our dedicated support team is available to assist you with any queries, concerns, or assistance you may need. Whether you require help with choosing the right furniture pieces, tracking your order, or resolving any issues, we are here to ensure that your experience with Furniking is seamless and enjoyable. Your satisfaction is our top priority.",
+    },
+    "ez-n-sec": {
+        "ru": "Лёгкие и Безопасные Покупки",
+        "en": "Easy and Secure Shopping",
+    },
+    "ez-n-sec-text": {
+        "ru": "Мы понимаем важность удобства и безопасности, когда дело касается покупок в Интернете. Вот почему мы приняли надежные меры, чтобы сделать ваши покупки в Furniking простыми и безопасными. Наш веб-сайт удобен для пользователя, что позволяет вам легко просматривать нашу коллекцию. Мы также уделяем приоритетное внимание безопасности вашей личной и финансовой информации, используя стандартное шифрование и безопасные платежные шлюзы для защиты ваших данных.",
+        "en": "We understand the importance of convenience and security when it comes to online shopping. That's why we have implemented robust measures to ensure that your shopping experience at Furniking is both easy and secure. Our website is user-friendly, allowing you to browse through our collection effortlessly. We also prioritize the security of your personal and financial information, employing industry-standard encryption and secure payment gateways to safeguard your data.",
+    },
+    "exp-the-diff": {
+        "ru": "Почувствуйте Разницу в Furniking",
+        "en": "Experience the Furniking Difference",
+    },
+    "exp-the-diff-text": {
+        "ru": "Откройте для себя радость преображения вашего жилого пространства с помощью высококачественной и стильной мебели от Furniking. Благодаря нашему обширному выбору, приверженности качеству, исключительной поддержке клиентов, а также простоте и безопасности покупок, мы стремимся превзойти ваши ожидания на каждом этапе. Начните изучать нашу коллекцию сегодня, и позвольте нам помочь вам создать дом, который будет отражать ваш уникальный стиль и индивидуальность.",
+        "en": "Discover the joy of transforming your living spaces with high-quality and stylish furniture from Furniking. With our extensive selection, commitment to quality, exceptional customer support, and easy and secure shopping experience, we strive to exceed your expectations at every step. Start exploring our collection today and let us help you create a home that reflects your unique style and personality.",
+    },
 
     "": {
         "ru": "",

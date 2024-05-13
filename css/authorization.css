@@ -150,18 +150,18 @@ form div{
     content: "<-- BLR";
 }
 .msg-less16::after{
-    content: "<-- >16";
+    content: ">16";
 }
 .msg-login-exist::after{
     content: "×";
     left: 535px;
 }
 .msg-small-password::after{
-    content: "<-- >8";
+    content: ">8";
     left: 610px;
 }
 .msg-big-password::after{
-    content: "<-- <20";
+    content: "<20";
     left: 610px;
 }
 .msg-digit-password::after{

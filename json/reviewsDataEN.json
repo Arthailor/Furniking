@@ -1,0 +1,32 @@
+[
+    {
+      "imgPath": "images/jpg/sirgay1.jpg",
+      "review": "This is the Review Snippet. This is the Review Snippet. This is the Review Snippet. This is the Review Snippet.",
+      "name": "Sergey",
+      "job": "1"
+    },
+    {
+      "imgPath": "images/jpg/sirgay2.jpg",
+      "review": "This is the Review Snippet. This is the Review Snippet. This is the Review Snippet. This is the Review Snippet.",
+      "name": "Sergey",
+      "job": "2"
+    },
+    {
+      "imgPath": "images/jpg/sirgay3.jpg",
+      "review": "This is the Review Snippet. This is the Review Snippet. This is the Review Snippet. This is the Review Snippet.",
+      "name": "Sergey",
+      "job": "3"
+    },
+    {
+      "imgPath": "images/jpg/sirgay1.jpg",
+      "review": "This is the Review Snippet. This is the Review Snippet. This is the Review Snippet. This is the Review Snippet.",
+      "name": "Sergey",
+      "job": "4"
+    },
+    {
+      "imgPath": "images/jpg/sirgay2.jpg",
+      "review": "This is the Review Snippet. This is the Review Snippet. This is the Review Snippet. This is the Review Snippet.",
+      "name": "Sergey",
+      "job": "5"
+    }
+]
