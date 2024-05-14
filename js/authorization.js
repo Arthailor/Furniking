@@ -123,7 +123,9 @@ signInForm.addEventListener('submit', async function (event) {
     }
     if (numberOfUser != -1) {
         alert('♥ ->' + roles[numberOfUser]);
+        localStorage.setItem('currUser', roles[numberOfUser]);
         signInForm.reset();
+        window.location.href = "index.html"; 
     } else {
         alert('×××');
     }

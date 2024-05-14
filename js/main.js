@@ -1,3 +1,5 @@
+setGuestInLocalStorage();
+checkUser();
 //Бургер-меню
 document.addEventListener('click', documentClick);
 
@@ -177,4 +179,49 @@ document.addEventListener("DOMContentLoaded", function () {
                 .getElementById("cover")
                 .classList.toggle("cover-button");
         });
+});
+
+//Гость
+async function getCurrentUserData() {
+    try {
+        const data = localStorage.getItem('currUser');
+        if (!data) {
+            throw new Error('No data found in localStorage');
+        }
+        return data;
+    } catch (error) {
+        console.error('Error:', error);
+    }
+}
+
+async function setGuestInLocalStorage() {
+    let currUserData = await getCurrentUserData();
+    if (currUserData != null || currUserData != undefined) {
+        return;
+    }
+    localStorage.setItem('currUser', "guest");
+}
+
+//Чек пользователя
+function checkUser() {
+    const data = localStorage.getItem('currUser');
+    if (data == "user"){
+        document.querySelector(".page__trend").classList.remove("hidden");
+        document.querySelector(".page__our").classList.remove("hidden");
+        document.querySelector(".page__customer").classList.add("hidden");
+        document.querySelector(".top-header__exits").classList.add("hidden");
+        document.querySelector(".top-header__exits2").classList.remove("hidden");
+    } else if (data == "admin"){
+        document.querySelector(".page__trend").classList.remove("hidden");
+        document.querySelector(".page__our").classList.remove("hidden");
+        document.querySelector(".page__customer").classList.remove("hidden");
+        document.querySelector(".top-header__exits").classList.add("hidden");
+        document.querySelector(".top-header__exits2").classList.remove("hidden");
+    } else {return;}
+}
+
+//логаут
+document.getElementById('exit').addEventListener('click', function () {
+    localStorage.setItem('currUser', "guest");
+    location.reload();
 });

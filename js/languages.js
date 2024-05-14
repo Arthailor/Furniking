@@ -758,6 +758,10 @@ const langArr = {
         "ru": "Благодаря этому руководству вы сможете наполнить свои жилые помещения освежающей и расслабляющей атмосферой лета. Встречайте сезон и превратите свой дом в летнее убежище с помощью лучших вариантов мебели, доступных в этой стране. Наслаждайтесь теплом, красотой и радостью, которые лето приносит в ваши жилые помещения. Приятного украшения!",
         "en": "With this guide, you are well-equipped to infuse your living spaces with the refreshing and relaxed vibes of summer. Embrace the season and transform your home into a summer retreat with the best furniture options available in this country. Enjoy the warmth, beauty, and joy that summer brings to your living spaces. Happy decorating!",
     },
+    "exit": {
+        "ru": "Выйти",
+        "en": "Logout",
+    },
 
     "": {
         "ru": "",
