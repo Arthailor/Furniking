@@ -31,15 +31,15 @@ const passwordUpLabel = document.getElementById('password-up-label');
 const confirmPasswordLabel = document.getElementById('confirm-password-label');
 const termsOfUseLabel = document.getElementById('terms-of-use-label');
 
-signUpButton.addEventListener('click', function(){
+signUpButton.addEventListener('click', function () {
     signIn.classList.add('hidden');
     signUp.classList.remove('hidden');
 });
-signInButton.addEventListener('click', function(){
+signInButton.addEventListener('click', function () {
     signUp.classList.add('hidden');
     signIn.classList.remove('hidden');
 });
-async function getUsersData(){
+async function getUsersData() {
     try {
         const data = localStorage.getItem('usersData');
         if (!data) {
@@ -50,17 +50,17 @@ async function getUsersData(){
         console.error('Error:', error);
     }
 }
-function checkMatches(item, items){
-    for(let i = 0; i < items.length; i++ ){
-        if(items[i] === item){
+function checkMatches(item, items) {
+    for (let i = 0; i < items.length; i++) {
+        if (items[i] === item) {
             return true;
         }
     }
     return false;
 }
-async function setAdminInLocalStorage(){
+async function setAdminInLocalStorage() {
     let usersData = await getUsersData();
-    if(usersData != null || usersData != undefined){
+    if (usersData != null || usersData != undefined) {
         return;
     }
     const admin = {
@@ -72,33 +72,33 @@ async function setAdminInLocalStorage(){
     const jsonData = JSON.stringify(usersData);
     localStorage.setItem('usersData', jsonData);
 }
-signInForm.addEventListener('input', async function() {
+signInForm.addEventListener('input', async function () {
 
     const signInData = new FormData(signInForm);
     const login = signInData.get('login');
     const password = signInData.get('password');
 
-    if(login == ''){
+    if (login == '') {
         loginInLabel.className = 'msg-empty';
         sendInFormButton.className = 'hidden';
         sendInFormButton.type = 'button';
         return;
-    } else{
+    } else {
         loginInLabel.classList.remove('msg-empty');
     }
-    if(password == ''){
+    if (password == '') {
         passwordInLabel.className = 'msg-empty';
         sendInFormButton.className = 'hidden';
         sendInFormButton.type = 'button';
         return;
-    } else{
+    } else {
         passwordInLabel.classList.remove('msg-empty');
     }
     sendInFormButton.classList.remove('hidden');
     sendInFormButton.type = 'submit';
 });
-signInForm.addEventListener('submit', async function(event) {
-    event.preventDefault(); 
+signInForm.addEventListener('submit', async function (event) {
+    event.preventDefault();
     const signInData = new FormData(signInForm);
     const login = signInData.get('login');
     const password = signInData.get('password');
@@ -112,24 +112,24 @@ signInForm.addEventListener('submit', async function(event) {
         roles.push(item.role);
         logins.push(item.login);
         passwords.push(item.password);
-    });    
+    });
     let numberOfUser = -1;
 
-    for(let i = 0; i < logins.length; i++ ){
-        if((logins[i] === login) && (passwords[i].toString() === password.toString())){
+    for (let i = 0; i < logins.length; i++) {
+        if ((logins[i] === login) && (passwords[i].toString() === password.toString())) {
             numberOfUser = i;
             break;
         }
-    }   
-    if(numberOfUser != -1){
+    }
+    if (numberOfUser != -1) {
         alert('♥ ->' + roles[numberOfUser]);
         signInForm.reset();
     } else {
         alert('×××');
     }
 });
-signUpForm.addEventListener('submit', async function(event) {
-    event.preventDefault(); 
+signUpForm.addEventListener('submit', async function (event) {
+    event.preventDefault();
     const signUpData = new FormData(signUpForm);
     const usersData = await getUsersData();
 
@@ -152,23 +152,23 @@ signUpForm.addEventListener('submit', async function(event) {
 
     signInButton.click();
 });
-generatePasswordButton.addEventListener('click', function(){
+generatePasswordButton.addEventListener('click', function () {
     let password = '!';
     const alphabet = 'abcdefghijklmnopqrstuvwxyz!?$%#@*()&+-=_';
     let ammountOfSmth = Math.floor(Math.random() * 4);
-    for(let j = 0; (password == undefined) || (password.length < 12); j++){
-        for(let i = 0; i < ammountOfSmth; i++){
-            if(j % 2 === 0){
+    for (let j = 0; (password == undefined) || (password.length < 12); j++) {
+        for (let i = 0; i < ammountOfSmth; i++) {
+            if (j % 2 === 0) {
                 const randomIndex = Math.floor(Math.random() * alphabet.length);
                 const randomLetter = alphabet[randomIndex];
                 const randomCase = Math.random() < 0.5 ? 0 : 1;
-                
+
                 if (randomCase === 1) {
                     password += randomLetter.toUpperCase();
-                } else{
+                } else {
                     password += randomLetter;
-                }          
-            } else{
+                }
+            } else {
                 const randomNumber = Math.floor(Math.random() * 10);
                 password += randomNumber;
             }
@@ -179,20 +179,20 @@ generatePasswordButton.addEventListener('click', function(){
     passwordConfirm.value = password;
     checkValidUpForm();
 });
-visiblePasswordButton.addEventListener('click', function(){
+visiblePasswordButton.addEventListener('click', function () {
     if (passwordInput.type === 'password') {
         passwordInput.type = 'text';
         passwordConfirm.type = 'text';
-      } else {
+    } else {
         passwordInput.type = 'password';
         passwordConfirm.type = 'password';
-      }
+    }
 });
-generateLoginButton.addEventListener('click', function(){
+generateLoginButton.addEventListener('click', function () {
     if (ammountOfGeneratedLigins < 10) {
-        const adjectives = ['Stupid', 'Bitchass', 'Fucking', 'Retarded', 'Autistic'];
-        const nouns = ['Nigger', 'Retard', 'Faggot', 'Bitch', 'Degenerate', 'Pussy'];
-    
+        const adjectives = ['Wonderful', 'Cute', 'Awesome', 'Beutiful', 'Handsome'];
+        const nouns = ['Dude', 'Guy', 'Human', 'Android', 'Man', 'Robot'];
+
         const randomAdjective = adjectives[Math.floor(Math.random() * adjectives.length)];
         const randomNoun = nouns[Math.floor(Math.random() * nouns.length)];
 
@@ -203,11 +203,11 @@ generateLoginButton.addEventListener('click', function(){
         alert('×');
     }
 });
-function setSubmitActive(){
+function setSubmitActive() {
     sendUpFormButton.classList.remove('hidden');
     sendUpFormButton.type = 'submit';
 }
-function disableSubmit(){
+function disableSubmit() {
     sendUpFormButton.className = 'hidden';
     sendUpFormButton.type = 'button';
 }
@@ -219,141 +219,141 @@ async function checkValidUpForm() {
     const name = signUpData.get('name');
     const surname = signUpData.get('surname');
     const login = signUpData.get('create-login');
-    const birthDay = signUpData.get('birth-date');   
+    const birthDay = signUpData.get('birth-date');
     const password = signUpData.get('create-password');
     const confirmPassword = signUpData.get('confirm-password');
     const termsOfUse = signUpData.get('terms-of-use');
-    
+
     const usersData = await getUsersData();
 
-    if(phone.toString().length != 12){
+    if (phone.toString().length != 12) {
         phoneLabel.className = 'msg-phone';
         disableSubmit();
         return;
-    } else{
+    } else {
         phoneLabel.classList.remove('msg-phone');
     }
-    if(!phone.startsWith("375")){
+    if (!phone.startsWith("375")) {
         phoneLabel.className = 'msg-phone-bel';
         disableSubmit();
         return;
-    } else{
+    } else {
         phoneLabel.classList.remove('msg-phone-bel');
     }
-    if(eMail == ''){
+    if (eMail == '') {
         emailLabel.className = 'msg-empty';
         disableSubmit();
         return;
-    } else{
+    } else {
         emailLabel.classList.remove('msg-empty');
     }
-    if(birthDay == ''){
+    if (birthDay == '') {
         birthdayLabel.className = 'msg-empty';
         disableSubmit();
         return;
-    } else{
+    } else {
         birthdayLabel.classList.remove('msg-empty');
     }
     let today = new Date();
     today.setFullYear(today.getFullYear() - 16)
     const birthDayDate = new Date(birthDay);
-    if(birthDayDate > today){
+    if (birthDayDate > today) {
         birthdayLabel.className = 'msg-less16';
         disableSubmit();
         return;
-    } else{
+    } else {
         birthdayLabel.classList.remove('msg-less16');
     }
-    if(name == ''){
+    if (name == '') {
         nameLabel.className = 'msg-empty';
         disableSubmit();
         return;
-    } else{
+    } else {
         nameLabel.classList.remove('msg-empty');
     }
-    if(surname == ''){
+    if (surname == '') {
         surnameLabel.className = 'msg-empty';
         disableSubmit();
         return;
-    } else{
+    } else {
         surnameLabel.classList.remove('msg-empty');
     }
-    if(login == ''){
+    if (login == '') {
         loginUpLabel.className = 'msg-empty';
         disableSubmit();
         return;
-    } else{
+    } else {
         loginUpLabel.classList.remove('msg-empty');
     }
     let logins = [];
     usersData.forEach(item => {
         logins.push(item.login);
-    }); 
-    if(checkMatches(login, logins)){
+    });
+    if (checkMatches(login, logins)) {
         loginUpLabel.className = 'msg-login-exist';
         disableSubmit();
         return;
-    } else{
+    } else {
         loginUpLabel.classList.remove('msg-login-exist');
     }
-    if(password.length < 8){
+    if (password.length < 8) {
         passwordUpLabel.className = 'msg-small-password';
         disableSubmit();
         return;
-    } else{
+    } else {
         passwordUpLabel.classList.remove('msg-small-password');
     }
-    if(password.length > 20){
+    if (password.length > 20) {
         passwordUpLabel.className = 'msg-big-password';
         disableSubmit();
         return;
-    } else{
+    } else {
         passwordUpLabel.classList.remove('msg-big-password');
     }
     const letterRegex = /[a-zA-Z]/;
-    if(!letterRegex.test(password)){
+    if (!letterRegex.test(password)) {
         passwordUpLabel.className = 'msg-letter-password';
         disableSubmit();
         return;
-    } else{
+    } else {
         passwordUpLabel.classList.remove('msg-letter-password');
     }
     const digitRegex = /\d/;
-    if(!digitRegex.test(password)){
+    if (!digitRegex.test(password)) {
         passwordUpLabel.className = 'msg-digit-password';
         disableSubmit();
         return;
-    } else{
+    } else {
         passwordUpLabel.classList.remove('msg-digit-password');
     }
     const specialCharRegex = /[!@#$%^&*(),.?":{}|<>]/;
-    if(!specialCharRegex.test(password)){
+    if (!specialCharRegex.test(password)) {
         passwordUpLabel.className = 'msg-speshal-symbol-password';
         disableSubmit();
         return;
-    } else{
+    } else {
         passwordUpLabel.classList.remove('msg-speshal-symbol-password');
-    }  
-    if(password != confirmPassword){
+    }
+    if (password != confirmPassword) {
         confirmPasswordLabel.className = 'msg-match-password';
         disableSubmit();
         return;
-    } else{
+    } else {
         confirmPasswordLabel.classList.remove('msg-match-password');
-    }  
-    if(termsOfUse == '' || termsOfUse == null){
+    }
+    if (termsOfUse == '' || termsOfUse == null) {
         termsOfUseLabel.className = 'msg-empty';
         disableSubmit();
         return;
-    } else{
+    } else {
         termsOfUseLabel.classList.remove('msg-empty');
     }
     setSubmitActive();
 }
-signUpForm.addEventListener('input', function(){
+signUpForm.addEventListener('input', function () {
     checkValidUpForm();
 });
-async function main(){
+async function main() {
     darkThemeSetup();
     setAdminInLocalStorage();
 }

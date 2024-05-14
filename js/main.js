@@ -5,6 +5,7 @@ function documentClick(e) {
     const targItem = e.target;
     if (targItem.closest('.icon-menu')) {
         document.documentElement.classList.toggle('menu-open')
+        document.querySelector("body").classList.toggle("body-scroll");
     }
 }
 
@@ -103,3 +104,77 @@ function documentActions(e) {
 function getIndex2(el) {
     return Array.from(el.parentNode.children).indexOf(el);
 }
+
+//плавный переход
+const anchors = document.querySelectorAll('a[href*="#"]')
+
+for (let anchor of anchors) {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault()
+
+        const blockID = anchor.getAttribute('href').substr(1)
+
+        document.getElementById(blockID).scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+        })
+    })
+}
+
+//реакция на скролл
+window.addEventListener('scroll', function () {
+    const scrollTop = window.pageYOffset;
+
+    // Изменение фона при прокрутке до раздела с классом "page__category"
+    if (scrollTop > document.querySelector('.header').offsetTop) {
+        document.querySelector('.to-top').classList.add('hidden');
+        // Изменение фона при прокрутке до раздела с классом "page__trend"
+        if (scrollTop > document.querySelector('.advantages').offsetTop) {
+            document.querySelector('.to-top').classList.remove('hidden');
+        }
+    } else {
+
+    }
+
+});
+
+//карты
+document.addEventListener("DOMContentLoaded", function () {
+    document.getElementById("map-button").addEventListener("click", function () {
+        document
+            .getElementById("footer-map")
+            .classList.toggle("footer-map-visible");
+        document.querySelector("body").classList.toggle("body-scroll");
+        document
+            .getElementById("cover")
+            .classList.toggle("cover-button");
+    });
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+    document
+        .getElementById("cover")
+        .addEventListener("click", function () {
+            document
+                .getElementById("footer-map")
+                .classList.toggle("footer-map-visible");
+            document.querySelector("body").classList.toggle("body-scroll");
+            document
+                .getElementById("cover")
+                .classList.toggle("cover-button");
+        });
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+    document
+        .getElementById("button-close")
+        .addEventListener("click", function () {
+            document
+                .getElementById("footer-map")
+                .classList.toggle("footer-map-visible");
+            document.querySelector("body").classList.toggle("body-scroll");
+            document
+                .getElementById("cover")
+                .classList.toggle("cover-button");
+        });
+});
