@@ -1,33 +1,33 @@
 const langArr = {
-    "welcome" :  {
+    "welcome": {
         "ru": "Добро пожаловать в наш онлайн магазин",
         "en": "Welcome to our online shop",
-    }, 
+    },
     "theme": {
         "ru": "Поменять тему",
         "en": "Switch theme",
-    }, 
+    },
     "or": {
         "ru": "или",
         "en": "or",
-    }, 
+    },
     "Login": {
         "ru": "Войти",
         "en": "Log in",
-    }, 
+    },
     "Signup": {
         "ru": "Регистрация",
         "en": "Sign up",
-    },  
+    },
     "categories": {
         "ru": "Категории",
         "en": "Categories",
-    }, 
-	"all": {
+    },
+    "all": {
         "ru": "Все",
         "en": "All",
     },
-	"input": {
+    "input": {
         "ru": " Поиск",
         "en": " Search here",
     },
@@ -78,27 +78,27 @@ const langArr = {
     "home": {
         "ru": "ГЛАВНАЯ",
         "en": "HOME",
-    }, 
+    },
     "shop": {
         "ru": "МАГАЗИН",
         "en": "SHOP",
-    }, 
+    },
     "blog": {
         "ru": "БЛОГ",
         "en": "BLOG",
-    }, 
+    },
     "about": {
         "ru": "О НАС",
         "en": "ABOUT",
-    }, 
+    },
     "contact": {
         "ru": "СВЯЗЬ С НАМИ",
         "en": "CONTACT US",
-    }, 
+    },
     "topcol": {
         "ru": "ТОП КОЛЛЕЦИЙ 2022",
         "en": "TOP COLLECTIONS 2022",
-    }, 
+    },
     "we-serve": {
         "ru": "Мы Предоставляем Вам ",
         "en": "We Serve Your Dream ",
@@ -378,11 +378,11 @@ const langArr = {
     "signin": {
         "ru": "Войти",
         "en": "Sign in",
-    }, 
+    },
     "login": {
         "ru": "Логин",
         "en": "Login",
-    }, 
+    },
     "pass": {
         "ru": "Пароль",
         "en": "Password",
@@ -502,6 +502,78 @@ const langArr = {
     "exp-the-diff-text": {
         "ru": "Откройте для себя радость преображения вашего жилого пространства с помощью высококачественной и стильной мебели от Furniking. Благодаря нашему обширному выбору, приверженности качеству, исключительной поддержке клиентов, а также простоте и безопасности покупок, мы стремимся превзойти ваши ожидания на каждом этапе. Начните изучать нашу коллекцию сегодня, и позвольте нам помочь вам создать дом, который будет отражать ваш уникальный стиль и индивидуальность.",
         "en": "Discover the joy of transforming your living spaces with high-quality and stylish furniture from Furniking. With our extensive selection, commitment to quality, exceptional customer support, and easy and secure shopping experience, we strive to exceed your expectations at every step. Start exploring our collection today and let us help you create a home that reflects your unique style and personality.",
+    },
+    "blog-title-1": {
+        "ru": "Искусство Оформления Небольших Помещений",
+        "en": "The Art of Styling Small Spaces",
+    },
+    "blog-date-1": {
+        "ru": "1 июля 2024 г.",
+        "en": "July 1, 2024",
+    },
+    "blog-text-1": {
+        "ru": "В этом посте мы углубляемся в мир дизайна небольших помещений и предлагаем практические советы о том, как максимально эффективно использовать ограниченную площадь. Откройте для себя продуманный выбор мебели, умные решения для хранения вещей и креативные идеи стиля, которые помогут вам превратить компактные помещения в функциональные и стильные убежища.",
+        "en": "In this post, we delve into the world of small space design and offer practical tips on how to make the most of limited square footage. Discover clever furniture choices, smart storage solutions, and creative styling ideas that will help you transform compact spaces into functional and stylish havens.",
+    },
+    "blog-title-2": {
+        "ru": "Принимая минимализм: мебель для дома без беспорядка",
+        "en": "Embracing Minimalism: Furniture for a Clutter-Free Home",
+    },
+    "blog-date-2": {
+        "ru": "15 августа 2024 г.",
+        "en": "August 15, 2024",
+    },
+    "blog-text-2": {
+        "ru": "Минимализм — это вневременная философия дизайна, которая способствует простоте и наведению порядка. В этом посте мы исследуем принципы минималистичного дизайна и демонстрируем предметы мебели, сочетающие чистые линии, нейтральные тона и эффективную организацию. Узнайте, как создать спокойную и свободную от беспорядка домашнюю обстановку, способствующую расслаблению и осознанности.",
+        "en": "Minimalism is a timeless design philosophy that promotes simplicity and decluttering. In this post, we explore the principles of minimalistic design and showcase furniture pieces that embrace clean lines, neutral tones, and efficient organization. Learn how to create a serene and clutter-free home environment that promotes relaxation and mindfulness.",
+    },
+    "blog-title-3": {
+        "ru": "Смешивание и сочетание: создание эклектичных мебельных комбинаций",
+        "en": "Mixing and Matching: Creating Eclectic Furniture Combinations",
+    },
+    "blog-date-3": {
+        "ru": "28 сентября 2024 г.",
+        "en": "September 28, 2024",
+    },
+    "blog-text-3": {
+        "ru": "Этот пост обязателен к прочтению тем, кто любит экспериментировать с разнообразными стилями и создавать уникальные персонализированные пространства. Мы погружаемся в искусство смешивания и сочетания предметов мебели разных эпох, культур и эстетики дизайна. Раскройте свой творческий потенциал и научитесь создавать гармоничные и эклектичные сочетания, отражающие вашу индивидуальность.",
+        "en": "For those who love to experiment with diverse styles and create unique, personalized spaces, this post is a must-read. We delve into the art of mixing and matching furniture pieces from different eras, cultures, and design aesthetics. Unleash your creativity and learn how to create harmonious and eclectic combinations that reflect your individuality.",
+    },
+    "blog-title-4": {
+        "ru": "Сила цвета: использование мебели для преобразования вашего пространства",
+        "en": "The Power of Color: Using Furniture to Transform Your Space",
+    },
+    "blog-date-4": {
+        "ru": "9 ноября 2024 г.",
+        "en": "November 9, 2024",
+    },
+    "blog-text-4": {
+        "ru": "Цвета способны вызывать эмоции и существенно влиять на атмосферу комнаты. В этой статье мы исследуем психологию цвета и дадим представление о том, как использовать мебель для создания определенного настроения и атмосферы. От смелых, эффектных предметов до тонких акцентов — узнайте, как использовать силу цвета, чтобы преобразить ваше жилое пространство.",
+        "en": "Colors have the ability to evoke emotions and significantly impact the ambiance of a room. In this post, we explore the psychology of color and provide insights on how to use furniture to create specific moods and atmospheres. From bold, statement pieces to subtle accents, discover how to harness the power of color to transform your living spaces.",
+    },
+    "blog-title-5": {
+        "ru": "Экологичная мебель: проектирование с заботой о планете",
+        "en": "Sustainable Furniture: Designing with the Planet in Mind",
+    },
+    "blog-date-5": {
+        "ru": "22 декабря 2024 г.",
+        "en": "December 22, 2024",
+    },
+    "blog-text-5": {
+        "ru": "Поскольку устойчивость продолжает приобретать все большее значение, мы углубляемся в мир экологически чистой мебели. Узнайте об экологически чистых материалах, этических производственных процессах и инновационных методах проектирования, которые минимизируют воздействие на окружающую среду. Узнайте, как сделать осознанный выбор при обустройстве дома без ущерба для стиля и качества.",
+        "en": "As sustainability continues to gain importance, we delve into the world of eco-friendly furniture. Learn about sustainable materials, ethical manufacturing processes, and innovative design practices that minimize environmental impact. Discover how you can make conscious choices when it comes to furnishing your home, without compromising on style or quality.",
+    },
+    "blog-title-6": {
+        "ru": "Уютный уголок: создание уголка для чтения",
+        "en": "The Cozy Corner: Creating a Reading Nook",
+    },
+    "blog-date-6": {
+        "ru": "4 февраля 2025 г.",
+        "en": "February 4, 2025",
+    },
+    "blog-text-6": {
+        "ru": "Окунитесь в мир книг и отдыха с помощью специального уголка для чтения. В этом посте мы покажем вам процесс создания уютного и привлекательного пространства, где вы сможете расслабиться и насладиться любимым чтением. От выбора идеального кресла до правильного освещения и хранения вещей — откройте для себя ключевые элементы для создания вашего личного прибежища для чтения.",
+        "en": "Escape into the world of books and relaxation with a dedicated reading nook. In this post, we guide you through the process of designing a cozy and inviting space where you can unwind and indulge in your favorite reads. From selecting the perfect armchair to incorporating proper lighting and storage, discover the key elements for creating your personal reading sanctuary.",
     },
 
     "": {
