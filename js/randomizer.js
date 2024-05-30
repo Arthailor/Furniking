@@ -1,7 +1,7 @@
 const language = localStorage.getItem('language');
 let reviewsDataPath;
-if (language == "ru"){reviewsDataPath = '../json/reviewsDataRU.json';}
-else if (language == "en"){reviewsDataPath = '../json/reviewsDataEN.json';}
+if (language == "ru"){reviewsDataPath = './json/reviewsDataRU.json';}
+else if (language == "en"){reviewsDataPath = './json/reviewsDataEN.json';}
 function getRandomInt(max) {
     return Math.floor(Math.random() * max);
 }

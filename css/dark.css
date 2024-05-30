@@ -62,3 +62,4 @@ body {
 .burger-wrap::before{
     background:#252525;
 }
+.modalActive{background-color: #353535;}

@@ -762,6 +762,78 @@ const langArr = {
         "ru": "Выйти",
         "en": "Logout",
     },
+    "modal-1": {
+        "ru": "Условия использования Furniking",
+        "en": "Furniking Terms of Use",
+    },
+    "modal-2": {
+        "ru": "Используя сайт Furniking, вы соглашаетесь с нашими Условиями использования и Политикой конфиденциальности.",
+        "en": "By using the Furniking website, you agree to our Terms of Use and Privacy Policy.",
+    },
+    "modal-3": {
+        "ru": "Использование платформы",
+        "en": "Using the platform",
+    },
+    "modal-4": {
+        "ru": "Вы можете использовать платформу Furniking только в законных целях.",
+        "en": "You may use the Furniking Platform only for lawful purposes.",
+    },
+    "modal-5": {
+        "ru": "Учетная запись",
+        "en": "Account",
+    },
+    "modal-6": {
+        "ru": "Для некоторых функций требуется регистрация с предоставлением достоверной информации. Вы отвечаете за безопасность своей учетной записи.",
+        "en": "Some features require registration with valid information. You are responsible for maintaining the security of your account.",
+    },
+    "modal-7": {
+        "ru": "Оплата и доставка",
+        "en": "Payment and delivery",
+    },
+    "modal-8": {
+        "ru": "Цены могут меняться, оплата через наши одобренные способы. Мы стараемся доставить вовремя, но не гарантируем сроки.",
+        "en": "Prices may vary, please pay via our approved methods. We try to deliver on time, but we do not guarantee delivery times.",
+    },
+    "adminmenu": {
+        "ru": "АдминМеню",
+        "en": "AdminMenu",
+    },
+    "all-users": {
+        "ru": "Все пользователи ",
+        "en": "All users ",
+    },
+    "your-role": {
+        "ru": "Ваша роль: ",
+        "en": "Your role is ",
+    },
+    "fname": {
+        "ru": "Имя:",
+        "en": "First name:",
+    },
+    "mname": {
+        "ru": "Фамилия:",
+        "en": "Middle name:",
+    },
+    "lname": {
+        "ru": "Отчество:",
+        "en": "Last name:",
+    },
+    "email": {
+        "ru": "Почта:",
+        "en": "Email:",
+    },
+    "phone": {
+        "ru": "Номер телефона:",
+        "en": "Phone number:",
+    },
+    "birthday": {
+        "ru": "Дата рождения:",
+        "en": "Birth date:",
+    },
+    "profile": {
+        "ru": "Профиль",
+        "en": "Profile",
+    },
 
     "": {
         "ru": "",

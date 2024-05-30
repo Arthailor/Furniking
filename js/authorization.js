@@ -13,9 +13,11 @@ const generatePasswordButton = document.getElementById('generate-password-button
 const passwordInput = document.getElementById('create-password');
 const passwordConfirm = document.getElementById('confirm-password');
 
+var usersArray = JSON.parse(localStorage.getItem("usersData"));
 const generateLoginButton = document.getElementById('generate-login-button');
 const loginInput = document.getElementById('create-login');
 let ammountOfGeneratedLigins = 0;
+let modal = false;
 
 const sendInFormButton = document.getElementById('sign-in-send');
 const loginInLabel = document.getElementById('login-in-label');
@@ -125,6 +127,7 @@ signInForm.addEventListener('submit', async function (event) {
         alert('♥ ->' + roles[numberOfUser]);
         localStorage.setItem('currUser', roles[numberOfUser]);
         signInForm.reset();
+        localStorage.setItem('currUserId', usersArray.findIndex((x) => x.login == login && x.password == password.toString()))
         window.location.href = "index.html"; 
     } else {
         alert('×××');
@@ -350,6 +353,13 @@ async function checkValidUpForm() {
     } else {
         termsOfUseLabel.classList.remove('msg-empty');
     }
+    if (!modal) {
+        termsOfUseLabel.className = 'msg-empty';
+        disableSubmit();
+        return;
+    }else {
+        termsOfUseLabel.classList.remove('msg-empty');
+    }
     setSubmitActive();
 }
 signUpForm.addEventListener('input', function () {
@@ -359,3 +369,57 @@ async function main() {
     darkThemeSetup();
     setAdminInLocalStorage();
 }
+/*TERMS OF USE*/
+// устанавливаем триггер для модального окна (название можно изменить)
+const modalTrigger = document.getElementsByClassName("trigger")[0];
+
+// получаем ширину отображенного содержимого и толщину ползунка прокрутки
+const windowInnerWidth = document.documentElement.clientWidth;
+const scrollbarWidth = parseInt(window.innerWidth) - parseInt(windowInnerWidth);
+
+// привязываем необходимые элементы
+const bodyElementHTML = document.getElementsByTagName("body")[0];
+const modalBackground = document.getElementsByClassName("modalBackground")[0];
+const modalClose = document.getElementsByClassName("modalClose")[0];
+const modalActive = document.getElementsByClassName("modalActive")[0];
+
+// функция для корректировки положения body при появлении ползунка прокрутки
+function bodyMargin() {
+    bodyElementHTML.style.marginRight = "-" + scrollbarWidth + "px";
+}
+
+// при длинной странице - корректируем сразу
+bodyMargin();
+
+// событие нажатия на триггер открытия модального окна
+modalTrigger.addEventListener("click", function () {
+    // делаем модальное окно видимым
+    modalBackground.style.display = "block";
+
+    // если размер экрана больше 1366 пикселей (т.е. на мониторе может появиться ползунок)
+    if (windowInnerWidth >= 1366) {
+        bodyMargin();
+    }
+
+    // позиционируем наше окно по середине, где 175 - половина ширины модального окна
+    modalActive.style.left = "calc(50% - " + (175 - scrollbarWidth / 2) + "px)";
+    modal = true;
+});
+
+// нажатие на крестик закрытия модального окна
+modalClose.addEventListener("click", function () {
+    modalBackground.style.display = "none";
+    if (windowInnerWidth >= 1366) {
+        bodyMargin();
+    }
+});
+
+// закрытие модального окна на зону вне окна, т.е. на фон
+modalBackground.addEventListener("click", function (event) {
+    if (event.target === modalBackground) {
+        modalBackground.style.display = "none";
+        if (windowInnerWidth >= 1366) {
+            bodyMargin();
+        }
+    }
+});

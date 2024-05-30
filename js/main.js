@@ -19,57 +19,59 @@ function documentClick(e) {
 }
 
 //Свайпер
-var swiper = new Swiper('.body-main__swiper', {
-    slidesPerView: 1,
-    autoplay: {
-        delay: 3000,
-    },
-    speed: 600,
-    pagination: {
-        el: '.swiper-pagination',
-        clickable: true,
-    },
-    thumbs: {
-        swiper: {
-            el: '.swiper-mini',
-            slidesPerView: 3,
-            spaceBetween: 30,
+if (document.querySelector(".body-main__swiper")) {
+    var swiper = new Swiper('.body-main__swiper', {
+        slidesPerView: 1,
+        autoplay: {
+            delay: 3000,
+        },
+        speed: 600,
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+        },
+        thumbs: {
+            swiper: {
+                el: '.swiper-mini',
+                slidesPerView: 3,
+                spaceBetween: 30,
 
-            // simulateTouch: false,
-            breakpoints: {
-                // when window width is >= 320px
-                320: {
-                    slidesPerView: 2,
-                    spaceBetween: 30
-                },
-                // when window width is >= 480px
-                480: {
-                    slidesPerView: 3,
-                    spaceBetween: 30
-                },
+                // simulateTouch: false,
+                breakpoints: {
+                    // when window width is >= 320px
+                    320: {
+                        slidesPerView: 2,
+                        spaceBetween: 30
+                    },
+                    // when window width is >= 480px
+                    480: {
+                        slidesPerView: 3,
+                        spaceBetween: 30
+                    },
+                }
             }
         }
-    }
+    });
 
-});
-var swiper = new Swiper('.trend-swiper', {
-    slidesPerView: 1,
-    speed: 600,
-    pagination: {
-        el: '.trend-pagination',
-        clickable: true,
-    },
+    var swiper = new Swiper('.trend-swiper', {
+        slidesPerView: 1,
+        speed: 600,
+        pagination: {
+            el: '.trend-pagination',
+            clickable: true,
+        },
 
-});
-var swiper = new Swiper('.customer-swiper', {
-    slidesPerView: 1,
-    speed: 600,
-    navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
-    },
+    });
+    var swiper = new Swiper('.customer-swiper', {
+        slidesPerView: 1,
+        speed: 600,
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
 
-});
+    });
+}
 
 //Пагинация
 window.addEventListener('load', windowLoad);
@@ -148,45 +150,47 @@ window.addEventListener('scroll', function () {
 });
 
 //карты
-document.addEventListener("DOMContentLoaded", function () {
-    document.getElementById("map-button").addEventListener("click", function () {
-        document
-            .getElementById("footer-map")
-            .classList.toggle("footer-map-visible");
-        document.querySelector("body").classList.toggle("body-scroll");
+if (document.getElementById("map-button")) {
+    document.addEventListener("DOMContentLoaded", function () {
+        document.getElementById("map-button").addEventListener("click", function () {
+            document
+                .getElementById("footer-map")
+                .classList.toggle("footer-map-visible");
+            document.querySelector("body").classList.toggle("body-scroll");
+            document
+                .getElementById("cover")
+                .classList.toggle("cover-button");
+        });
+    });
+
+    document.addEventListener("DOMContentLoaded", function () {
         document
             .getElementById("cover")
-            .classList.toggle("cover-button");
+            .addEventListener("click", function () {
+                document
+                    .getElementById("footer-map")
+                    .classList.toggle("footer-map-visible");
+                document.querySelector("body").classList.toggle("body-scroll");
+                document
+                    .getElementById("cover")
+                    .classList.toggle("cover-button");
+            });
     });
-});
 
-document.addEventListener("DOMContentLoaded", function () {
-    document
-        .getElementById("cover")
-        .addEventListener("click", function () {
-            document
-                .getElementById("footer-map")
-                .classList.toggle("footer-map-visible");
-            document.querySelector("body").classList.toggle("body-scroll");
-            document
-                .getElementById("cover")
-                .classList.toggle("cover-button");
-        });
-});
-
-document.addEventListener("DOMContentLoaded", function () {
-    document
-        .getElementById("button-close")
-        .addEventListener("click", function () {
-            document
-                .getElementById("footer-map")
-                .classList.toggle("footer-map-visible");
-            document.querySelector("body").classList.toggle("body-scroll");
-            document
-                .getElementById("cover")
-                .classList.toggle("cover-button");
-        });
-});
+    document.addEventListener("DOMContentLoaded", function () {
+        document
+            .getElementById("button-close")
+            .addEventListener("click", function () {
+                document
+                    .getElementById("footer-map")
+                    .classList.toggle("footer-map-visible");
+                document.querySelector("body").classList.toggle("body-scroll");
+                document
+                    .getElementById("cover")
+                    .classList.toggle("cover-button");
+            });
+    });
+}
 
 //Гость
 async function getCurrentUserData() {
@@ -212,26 +216,35 @@ async function setGuestInLocalStorage() {
 //Чек пользователя
 function checkUser() {
     const data = localStorage.getItem('currUser');
-    if (data == "user"){
-        document.querySelector(".page__trend").classList.remove("hidden");
-        document.querySelector(".page__our").classList.remove("hidden");
-        document.querySelector(".page__customer").classList.add("hidden");
-        document.querySelector(".top-header__exits").classList.add("hidden");
-        document.querySelector(".top-header__exits2").classList.remove("hidden");
-    } else if (data == "admin"){
-        document.querySelector(".page__trend").classList.remove("hidden");
-        document.querySelector(".page__our").classList.remove("hidden");
-        document.querySelector(".page__customer").classList.remove("hidden");
-        document.querySelector(".top-header__exits").classList.add("hidden");
-        document.querySelector(".top-header__exits2").classList.remove("hidden");
-    } else {return;}
+    if (document.querySelector(".page__trend")) {
+        if (data == "user") {
+            document.querySelector(".page__trend").classList.remove("hidden");
+            document.querySelector(".page__our").classList.remove("hidden");
+            document.querySelector(".page__customer").classList.add("hidden");
+            document.querySelector(".top-header__exits").classList.add("hidden");
+            document.querySelector(".top-header__exits2").classList.remove("hidden");
+        } else if (data == "admin") {
+            document.querySelector(".page__trend").classList.remove("hidden");
+            document.querySelector(".page__our").classList.remove("hidden");
+            document.querySelector(".page__customer").classList.remove("hidden");
+            document.querySelector(".top-header__exits").classList.add("hidden");
+            document.querySelector(".top-header__exits2").classList.remove("hidden");
+            document.querySelector(".top-header__exits2").classList.remove("hidden");
+        } else { return; }
+    }
+    if (data == "user") {
+    } else if (data == "admin") {
+        document.querySelector(".lng-adminmenu").classList.remove("hidden");
+    } else { return; }
 }
 
 //логаут
-document.getElementById('exit').addEventListener('click', function () {
-    localStorage.setItem('currUser', "guest");
-    localStorage.setItem('language', "en");
-    location.href = window.location.pathname + '#en';
-    localStorage.setItem('theme', "");
-    location.reload();
-});
+if (document.getElementById('exit')) {
+    document.getElementById('exit').addEventListener('click', function () {
+        localStorage.setItem('currUser', "guest");
+        localStorage.setItem('language', "en");
+        location.href = window.location.pathname + '#en';
+        localStorage.setItem('theme', "");
+        window.location.href = "index.html";
+    });
+}

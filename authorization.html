@@ -7,11 +7,15 @@
     <title>Welcome!</title>
     <link rel="icon" href="images/svg/logo.svg" type="image/x-icon">
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" type="text/css" href="css/style.css" id="theme-link">
     <link rel="stylesheet" href="css/authorization.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css" id="theme-link">
 </head>
 
 <body>
+    <div class="loading">
+        <img src="images/svg/logo.svg" alt="logo">
+    </div>
+    <div class="preload">
     <div class="wrapper">
         <header>
             <div class="header__top top-header">
@@ -104,7 +108,7 @@
                             <div>
                                 <label for="terms-of-use" id="terms-of-use-label">
                                     <a class="lng-i-agree">I read and agree with </a>
-                                    <a class="lng-term-reg" href="#">terms of use </a> 
+                                    <a class="lng-term-reg trigger" href="#">terms of use </a> 
                                     <span>*</span>
                                     </label>
                                 <input type="checkbox" name="terms-of-use" id="terms-of-use" required>
@@ -122,6 +126,7 @@
             <div class="footer__bottom bottom-footer">
                 <div class="bottom-footer__container">
                     <div class="bottom-footer__copy lng-all-rights">© 2021 Furniking - All rights reserved.</div>
+                    <a href="admin_panel.html" class="bottom-footer__link lng-adminmenu hidden">AdminMenu</a>
                     <nav class="bottom-footer__menu">
                         <ul class="bottom-footer__list">
                             <li class="bottom-footer__item">
@@ -138,11 +143,36 @@
                 </div>
             </div>
         </footer>
+        <div class="modalBackground">
+            <div class="modalActive">
+                <div class="modalClose">
+                    <button id="button-close" class="footer-button-close">
+                        <span></span>
+                        <span></span>
+                    </button>
+                </div>
+                <div class="modalWindow">
+                    <a><a class="lng-modal-1">Условия использования Furniking</a><br>
+                        <br>
+                        <a class="lng-modal-2">Используя сайт Furniking, вы соглашаетесь с нашими Условиями использования и Политикой конфиденциальности.</a><br><br>
+                        <a class="lng-modal-3">Использование платформы</a><br>
+                        <br>
+                        <a class="lng-modal-4">Вы можете использовать платформу Furniking только в законных целях.</a><br><br>
+                        <a class="lng-modal-5">Учетная запись</a><br>
+                        <br>
+                        <a class="lng-modal-6">Для некоторых функций требуется регистрация с предоставлением достоверной информации. Вы отвечаете за безопасность своей учетной записи.</a><br><br>
+                        <a class="lng-modal-7">Оплата и доставка</a><br>
+                        <br>
+                        <a class="lng-modal-8">Цены могут меняться, оплата через наши одобренные способы. Мы стараемся доставить вовремя, но не гарантируем сроки.</a><br>
+                </div>
+            </div>
+        </div>
     </div>
     <script src="js/authorization.js" type="module"></script>
     <script src="js/theme-switcher.js"></script>
     <script src="js/languages.js"></script>
     <script src="js/lang-switcher.js"></script>
+    <script src="js/main.js"></script>
 </body>
 
 </html>

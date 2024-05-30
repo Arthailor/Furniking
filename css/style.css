@@ -10,6 +10,7 @@ body {
     background: #E5E5E5;
     color: #555555;
     transition: background-color .7s ease;
+    overflow-x: hidden;
 }
 
 /* ======================================= */
@@ -2095,12 +2096,12 @@ body {
 .hidden{display: none;}
 
 /* прелоадер */
-.wrapper {
+.preload {
     opacity: 0;
     transition: opacity .7s ease;
 }
 
-.loaded .wrapper {
+.loaded .preload {
     opacity: 1;
 }
 
