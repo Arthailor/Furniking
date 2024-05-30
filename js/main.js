@@ -1,3 +1,10 @@
+window.onload = function () {
+    setTimeout(function () {
+        document.body.classList.add('loaded')
+
+    }, 200)
+}
+
 setGuestInLocalStorage();
 checkUser();
 //Бургер-меню
@@ -223,5 +230,8 @@ function checkUser() {
 //логаут
 document.getElementById('exit').addEventListener('click', function () {
     localStorage.setItem('currUser', "guest");
+    localStorage.setItem('language', "en");
+    location.href = window.location.pathname + '#en';
+    localStorage.setItem('theme', "");
     location.reload();
 });
