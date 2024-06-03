@@ -154,8 +154,7 @@ signUpForm.addEventListener('submit', async function (event) {
     const jsonData = JSON.stringify(usersData);
     localStorage.setItem('usersData', jsonData);
     signUpForm.reset();
-
-    signInButton.click();
+    window.location.reload();
 });
 generatePasswordButton.addEventListener('click', function () {
     let password = '!';
@@ -231,14 +230,21 @@ async function checkValidUpForm() {
 
     const usersData = await getUsersData();
 
-    if (phone.toString().length != 12) {
+    if (!phone.startsWith("+")) {
+        phoneLabel.className = 'msg-phone-plus';
+        disableSubmit();
+        return;
+    } else {
+        phoneLabel.classList.remove('msg-phone-plus');
+    }
+    if (phone.toString().length != 13) {
         phoneLabel.className = 'msg-phone';
         disableSubmit();
         return;
     } else {
         phoneLabel.classList.remove('msg-phone');
     }
-    if (!phone.startsWith("375")) {
+    if (!phone.startsWith("+375")) {
         phoneLabel.className = 'msg-phone-bel';
         disableSubmit();
         return;
@@ -276,12 +282,26 @@ async function checkValidUpForm() {
     } else {
         nameLabel.classList.remove('msg-empty');
     }
+    if (name.toString().length < 3) {
+        nameLabel.className = 'msg-name-more3';
+        disableSubmit();
+        return;
+    } else {
+        nameLabel.classList.remove('msg-name-more3');
+    }
     if (surname == '') {
         surnameLabel.className = 'msg-empty';
         disableSubmit();
         return;
     } else {
         surnameLabel.classList.remove('msg-empty');
+    }
+    if (surname.toString().length < 3) {
+        surnameLabel.className = 'msg-name-more3';
+        disableSubmit();
+        return;
+    } else {
+        surnameLabel.classList.remove('msg-name-more3');
     }
     if (login == '') {
         loginUpLabel.className = 'msg-empty';
@@ -365,10 +385,6 @@ async function checkValidUpForm() {
 signUpForm.addEventListener('input', function () {
     checkValidUpForm();
 });
-async function main() {
-    darkThemeSetup();
-    setAdminInLocalStorage();
-}
 /*TERMS OF USE*/
 // устанавливаем триггер для модального окна (название можно изменить)
 const modalTrigger = document.getElementsByClassName("trigger")[0];

@@ -1,32 +1,32 @@
 [
   {
-    "imgPath": "images/jpg/sirgay1.jpg",
+    "imgPath": "images/jpg/physics-teacher.jpg",
     "review": "I am completely satisfied with my purchase from the Furniking furniture store. Their selection and quality of products is amazing. I purchased a new sofa and table for my living room and they fit perfectly into my decor. The service was beyond praise. The store staff were professional and friendly and helped me with my selection and ordering. I recommend Furniking to anyone looking for quality furniture at affordable prices.",
-    "name": "Sergey 1",
+    "name": "Michael Johnson",
     "job": "Physics teacher"
   },
   {
-    "imgPath": "images/jpg/sirgay2.jpg",
+    "imgPath": "images/jpg/sales-manager.jpg",
     "review": "Furniking furniture store is a real find for lovers of stylish and functional design. I purchased a bed and wardrobe from them for my bedroom and they exceeded all my expectations. The quality of the products is impeccable and the prices are very reasonable. I also wanted to highlight the professionalism and politeness of the store staff. They helped me with the selection and organization of delivery. I am very pleased with my purchase and will definitely recommend Furniking to my friends and acquaintances.",
-    "name": "Sergey 2",
+    "name": "David Patel",
     "job": "Sales Manager"
   },
   {
-    "imgPath": "images/jpg/sirgay3.jpg",
+    "imgPath": "images/jpg/architect.jpg",
     "review": "Furniking is the ideal place to buy furniture. I updated my kitchen by ordering a table, chairs and display from them. The quality of the products is amazing and the design is modern and elegant. I would also like to mention the excellent service. The store employees were polite and ready to help me with my selection and ordering. I am happy to recommend Furniking to anyone who values ​​quality and style.",
-    "name": "Sergey 3",
+    "name": "Christopher Nudyen",
     "job": "Architect"
   },
   {
-    "imgPath": "images/jpg/sirgay4.jpg",
+    "imgPath": "images/jpg/photographer.jpg",
     "review": "I am very pleased with my purchase from the Furniking furniture store. I was looking for a new living room set and they had a great selection of styles and colors to choose from. The quality of the furniture is high and it looks amazing in my interior. I would like to note the professionalism and friendliness of the store staff. They were ready to answer all my questions and help me make the right choice. Thank you Furniking!",
-    "name": "Sergey 4",
+    "name": "Daniel Hernandez",
     "job": "Photographer"
   },
   {
-    "imgPath": "images/jpg/sirgay5.jpg",
+    "imgPath": "images/jpg/lawyer.jpg",
     "review": "The Furniking furniture store is a real find for anyone looking for comfort and style in their home. I bought armchairs and a coffee table for the living room from them, and they became a real decoration of my interior. The quality of the products is excellent and they are very easy to use. I would like to highlight the excellent service I received from the store. The staff were attentive and helped me find the perfect pieces of furniture. I am happy to recommend Furniking to everyone who values ​​quality and comfort.",
-    "name": "Sergey 5",
+    "name": "William Jordan",
     "job": "Lawyer"
   }
 ]

@@ -197,11 +197,17 @@ form div{
 .msg-phone::after{
     content: "×";
 }
+.msg-phone-plus::after{
+    content: "<-- +";
+}
 .msg-phone-bel::after{
     content: "<-- BLR";
 }
 .msg-less16::after{
     content: ">16";
+}
+.msg-name-more3::after{
+    content: ">3";
 }
 .msg-login-exist::after{
     content: "×";
